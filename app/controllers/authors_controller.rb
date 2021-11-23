@@ -7,18 +7,17 @@ class AuthorsController < ApplicationController
     #     @author = Author.find(params[:id])
     # end
     
-    # def new
-    #     @author = Author.new
-    # end
+    def new
+    end
 
     def create
-        @author = Author.new(params[:author])
-        #@author.save
+        @author = Author.new(author_params)
+        @author.save
         #redirect_to @author
     end
-    # private
-    # def author_params
-    #     params.require(:author).permit(:first_name, :last_name, :homepage)
-    # end
+    private
+    def author_params
+        params.require(:author).permit(:first_name, :last_name, :homepage)
+    end
 
 end
