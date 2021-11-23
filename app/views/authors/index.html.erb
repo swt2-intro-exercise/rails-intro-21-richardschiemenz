@@ -2,20 +2,18 @@
  
 <table>
   <tr>
-    <th>first_name</th>
-    <th>last_name</th>
-    <th>homepage</th>
     <th>name</th>
+    <th>homepage</th>
     <th></th>
   </tr>
  
   <% @authors.each do |author| %>
     <tr>
-      <td><%= author.first_name %></td>
-      <td><%= author.last_name %></td>
-      <td><%= author.homepage %></td>
       <td><%= author.name %></td>
+      <td><%= author.homepage %></td>
       <td><%= link_to 'Show', author_path(author) %></td>
     </tr>
   <% end %>
 </table>
+
+<a href=authors_new>'New'</a>
